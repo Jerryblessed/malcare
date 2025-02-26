@@ -1,0 +1,39 @@
+{% extends 'fitness/base.html' %}
+
+{% block title %}Home - Malcare{% endblock %}
+
+{% block content %}
+<div class="homepage">
+    <h1>Welcome to Malcare</h1>
+    <p>Your personal health and wellness companion for malaria prevention and recovery.</p>
+
+    <section class="features">
+        <h2>What Malcare Offers</h2>
+        <ul>
+            <li><strong>Malcare Virtual Doctor:</strong> Get personalized malaria health insights and AI-powered recovery recommendations.</li>
+            <li><strong>Activity & Exercise Tracking:</strong> Monitor your workouts to maintain a healthy immune system.</li>
+            <li><strong>Dietary Guidance:</strong> Track your nutrition and get tailored meal plans for malaria recovery.</li>
+            <li><strong>Weight & Health Monitoring:</strong> Keep your body in optimal condition for disease resistance.</li>
+        </ul>
+    </section>
+
+    <section class="navigation">
+        <h2>Get Started</h2>
+        <ul>
+            {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}! What would you like to do today?</p>
+            <li><a href="{% url 'profile' %}">View Your Health Profile</a></li>
+            <li><a href="{% url 'malcare_doc' %}">Consult Malcare Doctor</a></li>
+            <li><a href="{% url 'activity_list' %}">Log Your Activities</a></li>
+            <li><a href="{% url 'diet_log' %}">Track Your Diet</a></li>
+            <li><a href="{% url 'weight_tracker' %}">Monitor Your Weight</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <p>Join Malcare today for a healthier life!</p>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Create an Account</a></li>
+            {% endif %}
+        </ul>
+    </section>
+</div>
+{% endblock %}
