@@ -14,7 +14,7 @@ SECRET_KEY="django-insecure-a7zrqd&6e*)*@fpxw&5zb!amz@77c!5q=p!d3ic(-nuwkn=yd&"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["malcare-hzc9facybthde6gm.canadacentral-01.azurewebsites.net"]
 
