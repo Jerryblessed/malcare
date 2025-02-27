@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a7zrqd&6e*)*@fpxw&5zb!amz@77c!5q=p!d3ic(-nuwkn=yd&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['malcare-hzc9facybthde6gm.canadacentral-01.azurewebsites.net']
 
 
 # Application definition
@@ -81,8 +81,15 @@ WSGI_APPLICATION = 'health_tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mal-server',  # Replace with your actual database name if different
+        'USER': 'yjpjcxwxjv',
+        'PASSWORD': 'JesusLovesYou@1',  # Replace with your actual database password
+        'HOST': 'mal-server.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',  # Azure requires SSL for PostgreSQL
+        }
     }
 }
 
