@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/landingstyle.css' %}">
+    <title>Responsive Video Background Landing Page</title>
+</head>
+<body>
+    <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+            <!-- Local Video Background -->
+            <video autoplay loop muted playsinline>
+                <source src="{% static 'video/h.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content text-md-center">
+            <h1>Welcome Everyone</h1>
+            <p><strong>Malcare Virtual Doctor:</strong> Get personalized malaria health insights and AI-powered recovery recommendations.</p>
+            <a class="btn" href="{% url 'register' %}">Get Started</a>
+        </div>
+    </header>
+</body>
+</html>

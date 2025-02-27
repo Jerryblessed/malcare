@@ -35,7 +35,9 @@ def register(request):
 
 
 def home(request):
-    return render(request, 'fitness/home.html')
+    if request.user.is_authenticated:
+        return render(request, 'fitness/home.html')
+    return render(request, 'fitness/landing.html')  
 
 
 @login_required
