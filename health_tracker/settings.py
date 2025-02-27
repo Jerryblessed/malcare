@@ -28,6 +28,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['malcare-hzc9facybthde6gm.canadacentral-01.azurewebsites.net']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://malcare-hzc9facybthde6gm.canadacentral-01.azurewebsites.net"
+]
 
 # Application definition
 
