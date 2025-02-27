@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,17 +83,7 @@ WSGI_APPLICATION = 'health_tracker.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mal-server',  # Replace with your actual database name if different
-        'USER': 'yjpjcxwxjv',
-        'PASSWORD': 'JesusLovesYou@1',  # Replace with your actual database password
-        'HOST': 'mal-server.postgres.database.azure.com',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',  # Azure requires SSL for PostgreSQL
-        }
-    }
+    'default': dj_database_url.config(default='postgres://yjpjcxwxjv:JesusLovesYou%401@mal-server.postgres.database.azure.com:5432/mal-server?sslmode=require')
 }
 
 
