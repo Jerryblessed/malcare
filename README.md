@@ -15,7 +15,7 @@ Welcome to **MalCare**, an intelligent non-invasive malaria treatment  health ap
 
 - **Backend**: Django (Python) for secure and scalable architecture.
 - **Frontend**: HTML, CSS, JavaScript for a responsive interface.
-- **Database**: PostgreSQL for efficient data storage and retrieval.
+- **Database**: Azure PostgreSQL- flexible server for efficient data storage and retrieval.
 - **AI & Cloud Services**:
   - **Azure GPT-4o** for AI-driven insights.
   - **Azure Chat Avatars** for interactive guidance.
