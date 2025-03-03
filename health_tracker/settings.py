@@ -24,14 +24,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Welcome to malcare settings.py file. To use an azure optimized settings.py replace this entire settings.py file with txt.txt file and configure appropriately.
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-a7zrqd&6e*)*@fpxw&5zb!amz@77c!5q=p!d3ic(-nuwkn=yd&'
+
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS")
+ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS")
+# uncomment and replace with your domain for azure hosting
+# ALLOWED_HOSTS = ['malcare-hzc9facybthde6gm.canadacentral-01.azurewebsites.net']
+
+# uncomment and replace with your domain for azure hosting to allow CSRF
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://malcare-hzc9facybthde6gm.canadacentral-01.azurewebsites.net"
+# ]
 
 # Application definition
 
@@ -84,8 +93,16 @@ WSGI_APPLICATION = 'health_tracker.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# # uncomment and replace with your database URL for azure hosting
+# DATABASES = {
+#     'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+# }
 
 
 # Password validation

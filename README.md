@@ -26,7 +26,7 @@ Welcome to **MalCare**, an intelligent non-invasive malaria treatment  health ap
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/your-github-username/malcare.git
+   git clone https://github.com/jerryblessed/malcare.git
    ```
 
 2. **Set Up a Virtual Environment**:
