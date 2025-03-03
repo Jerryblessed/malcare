@@ -54,10 +54,14 @@ Welcome to **MalCare**, an intelligent non-invasive malaria treatment  health ap
    ```sh
    python manage.py runserver
    ```
+5. **Deployment of Azure**:
 
+   ```sh
+   deploy on azure after replacement of settings.py with azure_settings.txt then configure the .env file
+   ```
 ## Contribution
 
-This project utilizes **GitHub Copilot** for optimized coding practices. Contributions are welcome to enhance security, AI features, and user experience.
+This project utilizes **GitHub Copilot** for optimized coding practices. Contributions are welcome to enhance security, AI features, and user experience. Note that ```.env``` file was left in main directory for testing purposes thank you. 
 
 ## License
 
