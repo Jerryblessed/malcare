@@ -19,10 +19,13 @@
             </video>
         </div>
         <div class="header-overlay"></div>
-        <div class="header-content text-md-center">
+        <div class="header-content">
             <h1>Welcome to Malcare</h1>
             <p><strong>Malcare Virtual Doctor:</strong> Get personalized malaria health insights and AI-powered recovery recommendations.</p>
-            <a class="btn" href="{% url 'register' %}">Get Started</a>
+            <div class="btn-group">
+                <a class="btn" href="{% url 'register' %}">Register</a>
+                <a class="btn" href="{% url 'register' %}">AI Chat</a>
+            </div>
         </div>
     </header>
 </body>

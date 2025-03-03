@@ -1,3 +1,4 @@
+<!--chat html here-->
 {% load static %}
 
 <!DOCTYPE html>
@@ -99,30 +100,28 @@
         <option value="swedencentral">Sweden Central</option>
         <option value="eastus2">East US 2</option>
       </select>
-      <label style="font-size: medium;" for="APIKey">API Key:</label>
-      <input id="APIKey" type="password" size="32" style="font-size: medium;" value="cfbaff47909440eb81278175a74359ea" />
-      <div style="background-color: white; width: 300px;">
-        <input type="checkbox" id="enablePrivateEndpoint" onchange="window.updatePrivateEndpoint()">Enable Private
-        Endpoint</input><br />
-      </div>
-      <div id="showPrivateEndpointCheckBox" hidden="hidden">
-        <label style="font-size: medium;" for="privateEndpoint">Private Endpoint:</label>
-        <input id="privateEndpoint" type="text" size="64" style="font-size: medium;"
-          placeholder="https://{your custom name}.cognitiveservices.azure.com/"></input><br />
-      </div><br />
+        <label style="font-size: medium;" for="APIKey">API Key:</label>
+        <input id="APIKey" type="password" size="32" style="font-size: medium;" value="{{ api_key }}" />
+        <div style="background-color: white; width: 300px;">
+          <input type="checkbox" id="enablePrivateEndpoint" onchange="window.updatePrivateEndpoint()">Enable Private
+          Endpoint</input><br />
+        </div>
+        <div id="showPrivateEndpointCheckBox" hidden="hidden">
+          <label style="font-size: medium;" for="privateEndpoint">Private Endpoint:</label>
+          <input id="privateEndpoint" type="text" size="64" style="font-size: medium;"
+            placeholder="https://{your custom name}.cognitiveservices.azure.com/"></input><br />
+        </div><br />
 
-      <h2 style="background-color: white; width: 300px;">Azure OpenAI Resource</h2>
-      <label style="font-size: medium;" for="azureOpenAIEndpoint">Endpoint:</label>
-      <input id="azureOpenAIEndpoint" type="text" size="64" style="font-size: medium;"
-        value="https://thisisoajo.openai.azure.com/"></input><br />
-      <label style="font-size: medium;" for="azureOpenAIApiKey">API Key:</label>
-      <input id="azureOpenAIApiKey" type="password" size="32" style="font-size: medium;"
-        value="9I4UEJweVUdih04Uv8AXcAxs5H8jSQRfwaugcSQYHcI882wSpFvqJQQJ99BAACL93NaXJ3w3AAABACOGkv4f" /><br />
-      <label style="font-size: medium;" for="azureOpenAIDeploymentName">Deployment Name:</label>
-      <input id="azureOpenAIDeploymentName" type="text" size="32" style="font-size: medium;" value="gpt-4o" /><br />
-      <label style="font-size: medium;" for="prompt">System Prompt:</label><br />
-      <textarea id="prompt" style="width: 640px;">
-
+        <h2 style="background-color: white; width: 300px;">Azure OpenAI Resource</h2>
+        <label style="font-size: medium;" for="azureOpenAIEndpoint">Endpoint:</label>
+        <input id="azureOpenAIEndpoint" type="text" size="64" style="font-size: medium;" value="{{ azure_openai_endpoint }}"></input><br />
+        <label style="font-size: medium;" for="azureOpenAIApiKey">API Key:</label>
+        <input id="azureOpenAIApiKey" type="password" size="32" style="font-size: medium;" value="{{ azure_openai_api_key }}" /><br />
+        <label style="font-size: medium;" for="azureOpenAIDeploymentName">Deployment Name:</label>
+        <input id="azureOpenAIDeploymentName" type="text" size="32" style="font-size: medium;" value="{{ azure_openai_deployment }}" /><br />
+        <label style="font-size: medium;" for="prompt">System Prompt:</label><br />
+        <textarea id="prompt" style="width: 640px;"></textarea>
+        <h2 style="background-color: white; width: 300px;">Chatbot Configuration</h2>
   You are a virtual doctor specializing in malaria recovery through diet and lifestyle recommendations. Your goal is to help users recover from malaria by recommending healthy meals, hydration, sleep duration, and exercises. Your responses should be interactive, engaging, and tailored to each user's available food options.
 
 Response Structure:
