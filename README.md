@@ -2,6 +2,8 @@
 
 Welcome to **MalCare**, an intelligent non-invasive malaria treatment  health application powered by AI. Designed to assist users in maintaining a healthy lifestyle, MalCare leverages **GPT-4o, Chat Avatars, and GitHub Copilot** to offer personalized fitness and nutrition recommendations.
 
+[Try now](https://jerryblessed.pythonanywhere.com/fitness/)
+
 ## Features
 
 - **AI-Powered Health Insights**: Get personalized health advice based on user data, powered by **GPT-4o**.
